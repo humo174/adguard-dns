@@ -1,0 +1,14 @@
+version: '3'
+services:
+  adguard:
+    image: adguard/adguardhome
+    container_name: adguard-dns
+    restart: unless-stopped
+    volumes:
+      - './env/work:/opt/adguardhome/work'
+      - './env/conf:/opt/adguardhome/conf'
+    ports:
+      - '53:53/tcp'
+      - '53:53/udp'
+      - '3000:3000/tcp'
+      - '8080:8080/tcp'
