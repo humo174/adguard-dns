@@ -5,6 +5,7 @@ Dockerized installation of AdGuard DNS Home
 Если попытаться включить AdGuard DNS Home на хосте, где поднят демон <code>resolving</code>, AdGuard DNS Home не будет принимать в себя соединения по 53 порту, потому что демон слушает 127.0.0.53:53. Необходимо выключить <code>DNSStubListener</code> на хосте. Пример для Debain:
 <br><br>1. Деактивация <code>DNSStubListener</code> и обновление DNS адреса. Создаем новый файл <code>/etc/systemd/resolved.conf.d/adguardhome.conf</code> и добавляем в него следующее:
 
+
 ```
 [Resolve]
 DNS=127.0.0.1
