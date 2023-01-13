@@ -22,3 +22,5 @@ Dockerized installation of AdGuard DNS Home
   systemctl stop systemd-resolved
   systemctl disable systemd-resolved
 ```
+
+  
