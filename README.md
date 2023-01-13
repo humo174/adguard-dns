@@ -9,12 +9,14 @@ Dockerized installation of AdGuard DNS Home
   DNS=127.0.0.1
   DNSStubListener=no
 ```
+  
 Указать необходимо 127.0.0.1 так как все соединения по 53 порту он будет прокидывать внутрь себя, что приведет к отправке запроса в докер-контейнер.
 <br><br>2. Задаем новый <code>resolv.conf</code>:
 ```
   mv /etc/resolv.conf /etc/resolv.conf.backup
   ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
 ```
+  
 <br><br>3. Выключаем <code>DNSStubListener</code> на хосте:
 ```
   systemctl stop systemd-resolved
