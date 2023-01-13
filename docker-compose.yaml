@@ -8,7 +8,17 @@ services:
       - './env/work:/opt/adguardhome/work'
       - './env/conf:/opt/adguardhome/conf'
     ports:
-      - '53:53/tcp'
-      - '53:53/udp'
-      - '3000:3000/tcp'
-      - '8080:8080/tcp'
+      - '53:53/tcp'#DNS Querries
+      - '53:53/udp'#DNS Querries
+      - '3000:3000/tcp'#WEB installation tool
+      - '8080:8080/tcp'#WEB administration tool
+#      - '67:67/udp'#DHCP Server ports
+#      - '68:68/tcp'#DHCP Server ports
+#      - '68:68/udp'#DHCP Server ports
+#      - '853:853/tcp'#DNS over TLS
+#      - '784:784/udp'#DNS over QUIC
+#      - '853:853/udp'#DNS over QUIC
+#      - '8853:8853/udp'#DNS over QUIC
+#      - '5443:5443/tcp'#DNS Crypt
+#      - '5443:5443/udp'#DNS Crypt
+#    network_mode: host#For DHCP Server
