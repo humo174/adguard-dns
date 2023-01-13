@@ -1,4 +1,4 @@
-<h1>AdGuard DNS Home
+<h1>AdGuard DNS Home</h1>
 Dockerized installation of AdGuard DNS Home
 
 <h2>Настройка резолвинга на хосте</h2>
